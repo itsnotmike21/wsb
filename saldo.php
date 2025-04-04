@@ -3,7 +3,7 @@ $saldoFile = "saldo.txt";
 
 // Jeśli plik nie istnieje, ustaw domyślne saldo
 if (!file_exists($saldoFile)) {
-    file_put_contents($saldoFile, "2137.69");
+    file_put_contents($saldoFile, "10000.00");
 }
 
 // Pobierz saldo i zwróć jako tekst

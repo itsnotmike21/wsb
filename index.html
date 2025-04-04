@@ -4,28 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>System Bankowy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
-        input, button {
-            margin: 10px;
-            padding: 10px;
-        }
-    </style>
+    <link rel="icon" href="images/bank_favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
     <script>
         function loadSaldo() {
-            fetch('saldo.php')  // Pobiera aktualne saldo z pliku PHP
+            fetch('saldo.php')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('saldo').innerHTML = data;
@@ -33,12 +16,15 @@
                 .catch(error => console.error('Błąd pobierania salda:', error));
         }
 
-        window.onload = loadSaldo;  // Automatycznie ładuje saldo przy starcie
+        window.onload = loadSaldo;
     </script>
 </head>
 <body>
 <div class="container">
-    <h1>Witaj!</h1>
+    <div class="header-content">
+        <img src="images/bank_logo.png" alt="Logo Banku" class="logo">
+        <h1>Witaj!</h1>
+    </div>
 
     <p>Twoje aktualne saldo: <strong id="saldo">Ładowanie...</strong></p>
 
