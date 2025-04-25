@@ -3,7 +3,7 @@ $saldoFile = "saldo.txt";
 
 // Jeśli plik nie istnieje, ustaw domyślne saldo
 if (!file_exists($saldoFile)) {
-    file_put_contents($saldoFile, "2137.69");
+    file_put_contents($saldoFile, "10000");
 }
 
 $saldo = floatval(file_get_contents($saldoFile));
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potwierdzenie przelewu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">

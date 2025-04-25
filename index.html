@@ -5,19 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>System Bankowy</title>
     <link rel="icon" href="images/bank_favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function loadSaldo() {
-            fetch('saldo.php')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('saldo').innerHTML = data;
-                })
-                .catch(error => console.error('Błąd pobierania salda:', error));
-        }
-
-        window.onload = loadSaldo;
-    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="container">
