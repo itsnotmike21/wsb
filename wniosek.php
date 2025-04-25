@@ -39,20 +39,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Formularz wniosku o kredyt -->
     <form action="wniosek.php" method="post">
-        <label for="kwota_kredytu">Kwota kredytu:</label>
-        <input type="number" id="kwota_kredytu" name="kwota_kredytu" min="1" step="1" required>
-        <button type="submit">Złóż wniosek</button>
+        <div class="form-group">
+            <label for="kwota_kredytu" class="font-weight-bold">Kwota kredytu:</label>
+            <!-- Rozwijana lista z kwotami, zachowując spójność z Twoimi stylami -->
+            <select id="kwota_kredytu" name="kwota_kredytu" class="form-control" required>
+                <option value="100">100 zł</option>
+                <option value="1000">1000 zł</option>
+                <option value="10000">10000 zł</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Złóż wniosek</button>
     </form>
 
     <!-- Wyświetlenie komunikatu -->
     <?php if (isset($komunikat)): ?>
-        <p><?= htmlspecialchars($komunikat) ?></p>
+        <p class="mt-3"><?= htmlspecialchars($komunikat) ?></p>
     <?php endif; ?>
 
     <!-- Przycisk powrotu do strony głównej -->
     <form action="index.php" method="get">
-        <button type="submit">Powrót do strony głównej</button>
+        <button type="submit" class="btn btn-secondary mt-3">Powrót do strony głównej</button>
     </form>
 </div>
+
 </body>
 </html>
